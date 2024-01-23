@@ -33,8 +33,11 @@ int lomuto(int *array, int low_idx, int high_idx, size_t size)
 	{
 		if (array[j] < pivot_value)
 		{
-			swap(&array[i], &array[j]);
-			print_array(array, size);
+			if (i != j)
+			{
+				swap(&array[i], &array[j]);
+				print_array(array, size);
+			}
 			i++;
 		}
 	}
